@@ -10,6 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require ocd_theme_reen/bootstrap.min
+ *= require ocd_theme_reen/fontello
+ *= require ocd_theme_reen/main
+ *= require ocd_theme_reen/orange
+ *= require ocd_theme_reen/owl.carousel
+ *= require ocd_theme_reen/owl.transitions
+ *= require ocd_theme_reen/animate.min
+ *= require custom
  */

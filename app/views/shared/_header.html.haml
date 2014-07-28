@@ -1,0 +1,34 @@
+%header
+  .navbar
+    .navbar-header
+      .container
+        %ul.info.pull-right
+          %li
+            %i.icon-mobile.contact
+            503-928-8369
+        / %ul.social.pull-right
+        /   %li
+        /     %a{href: "#"}
+        /       %i.icon-s-facebook
+        /   %li
+        /     %a{href: "#"}
+        /       %i.icon-s-gplus
+        /   %li
+        /     %a{href: "#"}
+        /       %i.icon-s-twitter
+        = link_to root_path, class: 'navbar-brand', title: 'OC Digital, LLC' do
+          = image_tag 'ocdigital_logo_large.png', alt: 'logo'
+          OC Digital
+        %a.btn.responsive-menu.pull-right{"data-target" => ".navbar-collapse", "data-toggle" => "collapse"}
+          %i.icon-menu-1
+    .yamm
+      .navbar-collapse.collapse
+        .container
+          = link_to root_path, class: 'navbar-brand', title: 'OC Digital, LLC' do
+            = image_tag 'ocdigital_logo_large.png', alt: 'logo'
+            OC Digital
+          %ul.nav.navbar-nav
+            / %li
+            /   = link_to 'Contact', '#'
+            / %li
+            /   = link_to "Blog", '#'

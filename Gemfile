@@ -59,7 +59,7 @@ gem 'sidekiq'
 gem 'sitemap_generator'
 
 # themes
-# gem 'ocd_theme_magnus', git: 'git@github.com:oc-digital/ocd_theme_magnus.git'
+gem 'ocd_theme_reen', git: 'git@github.com:oc-digital/ocd_theme_reen.git'
 gem 'ocd_theme_admin_genius', git: 'git@github.com:oc-digital/ocd_theme_admin_genius.git', tag: 'v2.0.2'
 
 # views

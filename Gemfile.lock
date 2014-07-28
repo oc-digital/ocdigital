@@ -61,6 +61,13 @@ GIT
       rails (~> 4.1.0)
 
 GIT
+  remote: git@github.com:oc-digital/ocd_theme_reen.git
+  revision: 398cfbb4fe0bd68a85b7d4f5108acb40a2e99f1c
+  specs:
+    ocd_theme_reen (1.0.0)
+      rails (>= 4.0.0)
+
+GIT
   remote: https://github.com/FriendlyId/friendly_id
   revision: 97ed06e4d4c4c9a57117c1e1c3c85eba94682844
   specs:
@@ -484,6 +491,7 @@ DEPENDENCIES
   less-rails
   mini_magick
   ocd_theme_admin_genius!
+  ocd_theme_reen!
   pg
   pg_search
   poltergeist

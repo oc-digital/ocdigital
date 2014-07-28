@@ -1,0 +1,27 @@
+!!!
+%html{lang: "en"}
+  %head
+    = render "shared/layout_meta"
+    / start: CSS
+    = stylesheet_link_tag "ocd_theme_reen/reen_skrollr", media: "all", data: {'skrollr-stylesheet' => ''}
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    / end: CSS
+    / start: Java Script
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+  %body
+    = render("shared/header")
+
+    %main
+      = yield(:content_top) if content_for?(:content_top)
+      .container
+        .row
+          .span12
+            - flash.each do |name, msg|
+              %div{class: "alert alert-#{name == "notice" ? "success" : "error"}"}
+                %a.close{"data-dismiss" => "alert", href: "#"} ×
+              = msg
+      = yield
+
+    %footer.dark-bg
+      = render("shared/footer_top")
+      = render("shared/footer_bottom")
