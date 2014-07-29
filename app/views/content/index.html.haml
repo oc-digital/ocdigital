@@ -7,7 +7,7 @@
           %p.fadeInDown-2.medium-color
             You have an idea. We can turn it into reality.
           .fadeInDown-3
-            %a.btn.btn-large{href: "#"} Hire Us for your Next Project
+            = link_to "Hire Us for Your Project", new_contact_path, class: 'btn btn-large'
     .item{style: "background-image: url(#{image_path 'slider02.jpg'});"}
       .container
         .caption.vertical-center.text-right
@@ -22,7 +22,7 @@
             %br/
             not the most expensive one.
           .fadeInLeft-3
-            %a.btn.btn-large{href: "#"} Get started now
+            = link_to "Get started now", new_contact_path, class: 'btn btn-large'
     .item{style: "background-image: url(#{image_path 'slider05.jpg'});"}
       .container
         .caption.vertical-top.text-center
@@ -35,7 +35,7 @@
             %br/
             We want to understand your business so we can provide measurable returns.
           .fadeInDown-3
-            %a.btn.btn-large{href: "#"} Get started now
+            = link_to "Get started now", new_contact_path, class: 'btn btn-large'
 
 %section#who-we-are
   .container.inner-top.inner-bottom-sm
@@ -131,5 +131,5 @@
             We love building ambitious web applications.
             %br/
             We're looking forward to helping you build your next audatious idea!
-        %a.btn.btn-large{href: "#"} Get in touch
+        = link_to "Get in touch", new_contact_path, class: 'btn btn-large'
 

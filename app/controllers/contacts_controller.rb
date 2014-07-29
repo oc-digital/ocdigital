@@ -9,14 +9,11 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
-    respond_to do |format|
-      if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
-        format.json { render :show, status: :created, location: @contact }
-      else
-        format.html { render :new }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
-      end
+    if @contact.save
+      Mailer.notify_admin_of_prospect(@contact.id).deliver
+      redirect_to thankyou_contact_path
+    else
+      render :new
     end
   end
 
@@ -26,5 +23,8 @@ class ContactsController < ApplicationController
   end
 
   private
-
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def contact_params
+    params.require(:contact).permit(:name, :email, :phone_number, :marketing_src, :subject, :message)
+  end
 end

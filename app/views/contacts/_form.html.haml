@@ -1,0 +1,15 @@
+= simple_form_for @contact, url: contact_path, html: { class: '' } do |f|
+  - if @contact.errors.any?
+    .alert.alert-block.alert-danger
+      %h4.alert-heading Oh Snap!
+      We found #{pluralize(@contact.errors.count, "problem")} with the form:
+      %ul
+        - @contact.errors.full_messages.each do |msg|
+          %li= msg
+  = f.input :name, label: 'Full name', required: true
+  = f.input :email, required: true
+  = f.input :phone_number
+  = f.input :subject, collection: Contact::SUBJECT_OPTIONS, label: 'What would you like to chat about?', required: true
+  = f.input :message, as: :text, input_html: {rows: 5}, required: true
+  = f.input :marketing_src, collection: Contact::MARKETING_SOURCES, label: 'How did you hear about us?'
+  %button#submit_contact_us_form.btn.btn-default.btn-submit{type: "submit"} Submit Message!
