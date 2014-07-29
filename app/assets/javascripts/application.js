@@ -13,6 +13,7 @@
 //= require jquery
 //= require ocd_theme_reen/jquery.easing.1.3.min
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require ocd_theme_reen/bootstrap.min
 //= require ocd_theme_reen/bootstrap-hover-dropdown.min
 //= require ocd_theme_reen/scroll_to_top
