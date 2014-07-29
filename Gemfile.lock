@@ -62,7 +62,8 @@ GIT
 
 GIT
   remote: git@github.com:oc-digital/ocd_theme_reen.git
-  revision: 398cfbb4fe0bd68a85b7d4f5108acb40a2e99f1c
+  revision: 5ff2ff284e51bf94975181fd030319820425944a
+  tag: v1.0.1
   specs:
     ocd_theme_reen (1.0.0)
       rails (>= 4.0.0)
@@ -397,31 +398,6 @@ GEM
     timers (1.1.0)
     treetop (1.4.15)
       polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
-      polyglot (>= 0.3.1)
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
