@@ -1,0 +1,28 @@
+- content_for :title,  "New Prospect!"
+
+%p
+  #{@prospect.name} sent you a message from the ocdigital.co contact page.
+%p
+  The message reads:
+%p= @prospect.message.html_safe
+%p
+  The full details from the contact form are:
+%table
+  %tr
+    %th Name
+    %td= @prospect.name
+  %tr
+    %th Email
+    %td= @prospect.email
+  %tr
+    %th Phone Number
+    %td= @prospect.phone_number
+  %tr
+    %th Reason
+    %td= @prospect.subject
+  %tr
+    %th Marketing Source
+    %td= @prospect.marketing_src
+  %tr
+    %th Message
+    %td= @prospect.message

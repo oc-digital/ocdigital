@@ -1,0 +1,41 @@
+- content_for :title,  "Contact"
+
+%section#hero.light-bg.img-bg.img-bg-soft{style: "background-image: url(#{image_path 'image-background04.jpg'});"}
+  .container.inner
+    .row
+      .col-md-8
+        %header
+          %h1 Let's connect
+          %p Do you want to know more? We’d love to hear from you!
+
+%section#contact-form
+  .container.inner-sm
+    .row
+      .col-sm-12
+        .row
+          .col-sm-6.outer-top-md.inner-right-sm
+            %h2 Tell us how we can help
+            = render 'form'
+          .col-sm-6.outer-top-md.inner-left-sm.border-left
+            %h2 Have a project?
+            %p We would love to hear the details!
+            %h3 OC Digital
+            %ul.contacts
+              %li
+                %i.icon-location.contact
+                17449 S. Holcomb Rd, Oregon City, OR 97045
+              %li
+                %i.icon-mobile.contact
+                503-928-8369
+              %li
+                %a{href: "mailto:gratitude@ocdigital.co"}
+                  %i.icon-mail-1.contact
+                  gratitude@ocdigital.co
+            / .social-network
+            /   %h3 Social
+            /   %ul.social
+            /     %li
+            /       %a{href: "#"}
+            /         %i.icon-s-facebook
+
+

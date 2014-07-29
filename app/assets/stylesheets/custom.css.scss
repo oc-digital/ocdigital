@@ -32,3 +32,19 @@ h2.heading {
   line-height: 130%;
   margin-bottom: 25px;
 }
+
+.simple_form {
+  label {
+    font-size: 13px;
+  }
+  input, textarea, select {
+    background: none repeat scroll 0 0 #f8fafd;
+    border-radius: 3px;
+  }
+}
+
+.forms {
+  label {
+    width: 100%;
+  }
+}
