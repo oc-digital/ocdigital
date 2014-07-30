@@ -93,5 +93,6 @@ Rails.application.configure do
     user_name: Rails.application.secrets.mandrill_un,
     password: Rails.application.secrets.mandrill_api_key
   }
-  config.action_mailer.default_url_options = { :host => 'jrmyward.com' }
+  config.action_mailer.asset_host          = 'http://ocdigital.co'
+  config.action_mailer.default_url_options = { :host => 'ocdigital.co' }
 end

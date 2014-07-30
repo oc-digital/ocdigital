@@ -25,7 +25,8 @@ Rails.application.configure do
     user_name: Rails.application.secrets.gmail_un,
     password: Rails.application.secrets.gmail_pw
   }
-  config.action_mailer.default_url_options = { :host => 'jrmyward.dev' }
+  config.action_mailer.asset_host          = 'http://ocdigital.dev'
+  config.action_mailer.default_url_options = { :host => 'ocdigital.dev' }
   config.action_mailer.default :charset => "utf-8"
 
 
