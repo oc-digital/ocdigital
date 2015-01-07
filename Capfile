@@ -23,6 +23,7 @@ require 'capistrano/rails/migrations'
 require 'capistrano/sidekiq'
 require 'capistrano/sidekiq/monit'
 require 'whenever/capistrano'
+require 'airbrake/capistrano3'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
