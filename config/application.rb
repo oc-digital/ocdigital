@@ -1,13 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
-# Pick the frameworks you want:
-require "active_model/railtie"
-require "active_record/railtie"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "sprockets/railtie"
-# require "rails/test_unit/railtie"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -27,29 +20,21 @@ module Ocdigital
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.active_record.raise_in_transactional_callbacks = true
+
     # Autoload model subdirectories
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**/}')]
-
-    console do
-      require "pry"
-      config.console = Pry
-      unless defined? Pry::ExtendCommandBundle
-        Pry::ExtendCommandBundle = Module.new
-      end
-      require "rails/console/app"
-      require "rails/console/helpers"
-      TOPLEVEL_BINDING.eval('self').extend ::Rails::ConsoleMethods
-    end
+    config.eager_load_paths += Dir[Rails.root.join('app', 'models', '**', '*.rb')]
 
     config.generators do |g|
       g.test_framework :rspec, fixture: true
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
-      g.assets false
-      g.helper false
       g.view_specs false
       g.integration_specs false
       g.stylesheets = false
       g.javascripts = false
+      g.helper = false
     end
 
   end

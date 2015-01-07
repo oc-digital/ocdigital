@@ -30,6 +30,7 @@ Spork.prefork do
   require 'capybara/rails'
   require 'capybara/poltergeist'
   require 'database_cleaner'
+  require 'sidekiq/testing'
   require 'shoulda-matchers'
   require 'webmock/rspec'
 
@@ -51,6 +52,7 @@ Spork.prefork do
   RSpec.configure do |config|
 
     # Include / Extend
+    config.include ActiveJob::TestHelper
     config.include Devise::TestHelpers, :type => :controller
     # config.extend ControllerMacros, :type => :controller
     config.include FactoryGirl::Syntax::Methods
