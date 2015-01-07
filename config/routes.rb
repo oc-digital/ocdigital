@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   get 'contact/thank-you' => 'contacts#thankyou', as: 'thankyou_contact'
 
   root :to => "content#index"
-
 end

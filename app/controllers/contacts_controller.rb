@@ -10,8 +10,8 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      Mailer.notify_admin_of_prospect(@contact.id).deliver
-      redirect_to thankyou_contact_path
+      Mailer.notify_admin_of_prospect(@contact).deliver_later
+      redirect_to thankyou_contact_url
     else
       render :new
     end
