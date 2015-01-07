@@ -58,6 +58,9 @@ GEM
     acts-as-taggable-on (3.4.3)
       activerecord (>= 3.2, < 5)
     addressable (2.3.6)
+    airbrake (4.1.0)
+      builder
+      multi_json
     ancestry (2.1.0)
       activerecord (>= 3.0.0)
     ansi (1.4.3)
@@ -455,6 +458,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on
+  airbrake
   ancestry
   browser
   bullet

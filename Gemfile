@@ -35,6 +35,9 @@ gem 'sanitize'
 # deployment
 gem 'unicorn'
 
+# error notification
+gem 'airbrake'
+
 # image manipulation
 gem 'mini_magick'
 gem 'carrierwave', git: 'git@github.com:carrierwaveuploader/carrierwave.git', branch: 'master'
