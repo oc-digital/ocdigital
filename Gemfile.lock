@@ -11,8 +11,8 @@ GIT
 
 GIT
   remote: git@github.com:oc-digital/ocd_theme_reen.git
-  revision: 5ff2ff284e51bf94975181fd030319820425944a
-  tag: v1.0.1
+  revision: 45bd7cd4bc93674d5632cb6c3abfef4a3c33966e
+  tag: v1.0.2
   specs:
     ocd_theme_reen (1.0.0)
       rails (>= 4.0.0)

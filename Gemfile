@@ -63,7 +63,7 @@ gem 'sidekiq'
 gem 'sitemap_generator'
 
 # themes
-gem 'ocd_theme_reen', git: 'git@github.com:oc-digital/ocd_theme_reen.git', tag: 'v1.0.1'
+gem 'ocd_theme_reen', git: 'git@github.com:oc-digital/ocd_theme_reen.git', tag: 'v1.0.2'
 
 # views
 gem 'browser'
